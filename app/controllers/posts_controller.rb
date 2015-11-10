@@ -8,12 +8,21 @@ class PostsController < ApplicationController
 	end
 
 	def create
-	 @post = Post.new(params.require(:post).permit(:title, :user))
+	 @post = current_user.posts.create(params.require(:post).permit(:title, :user, :content))
   	  if @post.save
    	    redirect_to root_path
   	  else
     	render "new"
   	  end
 	end
+     def destroy
+       @post = Post.find(params[:id])
+       @post.destroy
+     
+       respond_to do |format|
+         format.html { redirect_to(posts_url) }
+         format.xml  { head :ok }
+       end
+     end
 
 end

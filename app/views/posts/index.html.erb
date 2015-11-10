@@ -1,9 +1,18 @@
+<div id="logo"> BLOG BLOG..</div>
 <h1>Posts</h1>
 
 <% @posts.each do |post| %>
   <div class="post">
-    <h2> <%= link_to post.title %> </h2>
-    <p> <%= post.user %> </p>
+
+    <h4> <%= post.title %> </h4>
+
+    <p> <%= post.name %> </p>
+
+    <p> <%= post.user ? post.user.email : "" %> </p>
+
+    <p> <%= post.content  %> </p>
+
+    <p><%= button_to "delete", post, :method=>:delete, :class=>:destroy %></p>
   </div>
 <% end %>
 

@@ -1,0 +1,28 @@
+body {
+  background: #a71b3e;
+  color: white;
+  font: 14px/1.5 Helvetica, Arial, sans-serif;
+  margin: 20px auto;
+  width: 500px;
+}
+a {
+  color: #efaaca;
+  text-decoration: none;
+}
+
+.post{
+	border: solid 3px yellow;
+	padding: 5px;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+#logo{
+	color:yellow;
+	font-size: 40px;
+	font-weight: bolder;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
